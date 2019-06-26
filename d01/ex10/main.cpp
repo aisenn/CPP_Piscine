@@ -20,9 +20,7 @@ int		main(int argc, char **argv)
 			std::ifstream	ifs(fileName);
 
 			if (-1 == stat(argv[i], &sb))
-			{
 				std::cout << "cato9tails: " << fileName << ": " << strerror(errno) << std::endl;
-			}
 			else if ((sb.st_mode & S_IFMT) == S_IFDIR)
 				std::cout << "cato9tails: " << fileName << ": Is a directory" << std::endl;
 			else if (!ifs.fail())
